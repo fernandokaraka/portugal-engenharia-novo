@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portugal Engenharia</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS principal (com bust de cache) -->
+  <link id="css-main" rel="stylesheet" href="./style.css?v=2025-08-13-02">
+</head>
+
+
+
+
+<body>
+ 
+<header class="site-header">
+  <div class="container header-bar">
+    <!-- Marca -->
+    <a class="brand" href="./index.html" style="text-decoration:none;font-weight:800;color:var(--ink)">
+      Portugal Engenharia
+    </a>
+
+    <!-- Navegação (desktop) -->
+    <nav class="nav" id="main-nav">
+      <a data-nav="home"      href="./index.html">Home</a>
+      <a data-nav="about"     href="./sobre.html">Sobre</a>
+      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="contact"   href="./contato.html">Contato</a>
+    </nav>
+
+    <!-- Idiomas (desktop) -->
+    <div class="lang" id="lang-switch">
+      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
+      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
+      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+    </div>
+
+    <!-- Hambúrguer (mobile) -->
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-panel" aria-label="Abrir menu">
+      ☰
+    </button>
+  </div>
+
+  <!-- Painel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <nav class="nav mobile">
+      <a data-nav="home"      href="./index.html">Home</a>
+      <a data-nav="about"     href="./sobre.html">Sobre</a>
+      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="contact"   href="./contato.html">Contato</a>
+    </nav>
+    <div class="lang mobile" style="margin-top:10px;display:flex;gap:8px">
+      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
+      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
+      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+    </div>
+    <a class="btn btn-primary block" href="./contato.html" style="margin-top:12px;text-align:center">Solicitar Orçamento</a>
+  </div>
+</header>
+
+
+<!-- Importante: garantir que o app.js seja carregado -->
+<script src="./app.js" type="module"></script>
+
+
+  <section class="section" style="background:var(--surface)">
+    <div class="container" style="display:grid;gap:24px;grid-template-columns:1fr 1fr">
+      <div>
+        <h1 class="text-brand" data-i18n="contact.title"></h1>
+        <p class="mt-2" data-i18n="contact.subtitle"></p>
+
+        <div class="card" style="margin-top:16px">
+          <div><strong data-i18n="contact.phone"></strong>: +55 (34) 3231-1080</div>
+          <div><strong data-i18n="contact.email"></strong>: portugalgeng.comercial@gmail.com</div>
+          <div><strong data-i18n="contact.address"></strong>: Av. Profa. Juvenília dos Santos, 1432 — Santa Mônica — Uberlândia</div>
+          <a class="btn btn-primary" target="_blank" href="https://wa.me/553432311080" data-i18n="contact.whats"></a>
+        </div>
+      </div>
+
+      <form id="contact-form" class="card" action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+        <div class="field">
+          <label data-i18n="form.name"></label>
+          <input name="name" required />
+        </div>
+        <div class="field">
+          <label data-i18n="form.email"></label>
+          <input type="email" name="email" required />
+        </div>
+        <div class="field">
+          <label data-i18n="form.phone"></label>
+          <input name="phone" />
+        </div>
+        <div class="field">
+          <label data-i18n="form.subject"></label>
+          <input name="subject" />
+        </div>
+        <div class="field">
+          <label data-i18n="form.message"></label>
+          <textarea name="message" rows="6" required></textarea>
+        </div>
+        <button class="btn btn-primary" data-i18n="form.send"></button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="container section" style="text-align:center;color:#6b7280">
+    <small>© <span id="year"></span> Portugal Engenharia</small>
+  </footer>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>

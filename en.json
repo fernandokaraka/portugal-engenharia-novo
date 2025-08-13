@@ -1,0 +1,99 @@
+{
+  "home": {
+    "hero": {
+      "title": { "a": "Building Your Future with", "b": "Innovation", "c": "and", "d": "Quality" },
+      "subtitle": "A renowned civil engineering company delivering comprehensive solutions for construction and infrastructure projects.",
+      "ctaPhone": "Contact +55 (34) 3231-1080",
+      "ctaProjects": "View projects"
+    },
+    "numbers": {
+      "clients": "Satisfied Clients",
+      "works": "Projects Delivered",
+      "approved": "Approved Designs",
+      "certs": "Certifications"
+    },
+    "services": {
+      "title": "Featured Services",
+      "subtitle": "From urban infrastructure to industrial assembly, we combine planning, technology and execution to deliver safe, high‑performance projects.",
+      "cards": {
+        "res": { "title": "Residential", "desc": "Execution and management of residential works." },
+        "ind": { "title": "Commercial & Industrial", "desc": "Projects and works for businesses and industries." },
+        "inf": { "title": "Infrastructure", "desc": "Paving, drainage, subdivisions and urbanism." },
+        "link": "See projects →"
+      }
+    },
+    "split1": {
+      "title": "Industrial Solutions",
+      "desc": "Industrial assembly and maintenance focused on boilermaking, piping, special welding and site management. We apply HSE and quality control throughout the process.",
+      "pills": ["Boilermaking", "Piping", "Special welding", "Site management"]
+    },
+    "split2": {
+      "title": "Urban Infrastructure",
+      "desc": "Asphalt paving, drainage and galleries. Planning to reduce traffic impact and deliver on schedule.",
+      "pills": ["Paving & drainage", "Galleries", "Signage", "Technological control"]
+    },
+    "split3": {
+      "title": "Tailor‑Made Projects",
+      "desc": "Refrigeration (ammonia/chilled water), engine rooms, networks and thermal insulation. Engineering‑to‑order for specific needs.",
+      "pills": ["Ammonia", "Chilled water", "Engine room", "Thermal insulation"]
+    },
+    "cta": {
+      "title": "Ready to start your project?",
+      "subtitle": "Talk to us and receive a tailored proposal.",
+      "button": "Request a Quote"
+    }
+  },
+  "about": {
+    "heroTitle": "About Portugal Engenharia",
+    "heroSubtitle": "Over 25 years building with quality, innovation and commitment to excellence.",
+    "mission": "Mission",
+    "missionText": "Provide solutions grounded on Project Management, Engineering and HSE (Health, Safety and Environment).",
+    "vision": "Vision",
+    "visionText": "Be a reference in the civil and industrial sector while contributing to a more sustainable environment.",
+    "pillarsTitle": "Our Pillars",
+    "pillars": [
+      { "title": "Technology", "desc": "Process and technological control at every stage." },
+      { "title": "Supplies", "desc": "Quality materials from approved suppliers." },
+      { "title": "Planning", "desc": "Schedule, cost and safety management focused on results." }
+    ],
+    "how": {
+      "title": "How we work",
+      "subtitle": "A conservative and efficient approach suited to local clients.",
+      "steps": [
+        "Technical survey and scope definition",
+        "Schedule, cost and HSE planning",
+        "Execution with quality control",
+        "Commissioning and technical handover"
+      ]
+    },
+    "metrics": {
+      "clients": "Satisfied Clients",
+      "works": "Projects Delivered",
+      "approved": "Approved Designs",
+      "certs": "Certifications"
+    }
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Selected projects showing our experience in different areas.",
+    "filters": { "todos": "All", "industrial": "Commercial & Industrial", "infra": "Infrastructure", "refrigeracao": "Refrigeration" },
+    "seeMore": "See details →"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Send your message or reach us through the channels below.",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "whats": "Chat on WhatsApp"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending..."
+  }
+}

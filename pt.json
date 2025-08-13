@@ -1,0 +1,99 @@
+{
+  "home": {
+    "hero": {
+      "title": { "a": "Construindo Seu Futuro com", "b": "Inovação", "c": "e", "d": "Qualidade" },
+      "subtitle": "Uma empresa renomada no setor de engenharia civil dedicada a oferecer soluções abrangentes para projetos de construção e infraestrutura.",
+      "ctaPhone": "Contato (34) 3231-1080",
+      "ctaProjects": "Ver projetos"
+    },
+    "numbers": {
+      "clients": "Clientes Satisfeitos",
+      "works": "Obras Entregues",
+      "approved": "Projetos Aprovados",
+      "certs": "Certificações"
+    },
+    "services": {
+      "title": "Nossos Serviços em Destaque",
+      "subtitle": "Da infraestrutura urbana à montagem industrial, unimos planejamento, tecnologia e execução para entregar obras com segurança e performance.",
+      "cards": {
+        "res": { "title": "Residenciais", "desc": "Execução e gerenciamento de obras residenciais." },
+        "ind": { "title": "Comerciais & Industriais", "desc": "Projetos e obras para negócios e indústrias." },
+        "inf": { "title": "Infraestrutura", "desc": "Pavimentação, drenagem, loteamentos e urbanismo." },
+        "link": "Ver projetos →"
+      }
+    },
+    "split1": {
+      "title": "Soluções Industriais",
+      "desc": "Montagem e manutenção industrial com foco em caldeiraria, tubulações, soldas especiais e gerenciamento de obra. Aplicamos SSMA e controle de qualidade em todo o processo.",
+      "pills": ["Caldeiraria", "Tubulações", "Soldas especiais", "Gerenciamento de obra"]
+    },
+    "split2": {
+      "title": "Infraestrutura Urbana",
+      "desc": "Pavimentação asfáltica, drenagem e galerias. Planejamento para reduzir impacto no trânsito e entregas dentro do prazo.",
+      "pills": ["Pavimentação e drenagem", "Galerias", "Sinalização", "Controle tecnológico"]
+    },
+    "split3": {
+      "title": "Projetos Sob Medida",
+      "desc": "Refrigeração (amônia/água gelada), salas de máquinas, redes e isolamento térmico. Engineering‑to‑order para necessidades específicas.",
+      "pills": ["Amônia", "Água gelada", "Sala de máquinas", "Isolamento térmico"]
+    },
+    "cta": {
+      "title": "Pronto para começar seu projeto?",
+      "subtitle": "Fale conosco e receba uma proposta personalizada.",
+      "button": "Solicitar Orçamento"
+    }
+  },
+  "about": {
+    "heroTitle": "Sobre a Portugal Engenharia",
+    "heroSubtitle": "Mais de 25 anos construindo com qualidade, inovação e compromisso com a excelência em cada projeto.",
+    "mission": "Missão",
+    "missionText": "Fornecer soluções para obras alicerçadas nos pilares de Gestão de Projetos, Engenharia e SSMA (Saúde, Segurança e Meio Ambiente).",
+    "vision": "Visão",
+    "visionText": "Ser referência no setor civil e industrial, trabalhando por um ambiente mais sustentável.",
+    "pillarsTitle": "Nossos Pilares",
+    "pillars": [
+      { "title": "Tecnologia", "desc": "Aplicação de processos e controle tecnológico em todas as etapas." },
+      { "title": "Insumos", "desc": "Qualidade de materiais e fornecedores homologados." },
+      { "title": "Planejamento", "desc": "Gestão de prazo, custo e segurança com foco em resultados." }
+    ],
+    "how": {
+      "title": "Como trabalhamos",
+      "subtitle": "Metodologia conservadora e eficiente, adequada ao perfil dos clientes do interior.",
+      "steps": [
+        "Levantamento técnico e definição de escopo",
+        "Planejamento de prazos, custos e SSMA",
+        "Execução com controle de qualidade",
+        "Comissionamento e entrega técnica"
+      ]
+    },
+    "metrics": {
+      "clients": "Clientes Satisfeitos",
+      "works": "Obras Entregues",
+      "approved": "Projetos Aprovados",
+      "certs": "Certificações"
+    }
+  },
+  "portfolio": {
+    "title": "Portfólio",
+    "subtitle": "Alguns projetos selecionados que mostram nossa experiência em diferentes frentes.",
+    "filters": { "todos": "Todos", "industrial": "Comerciais & Industriais", "infra": "Infraestrutura", "refrigeracao": "Refrigeração" },
+    "seeMore": "Ver detalhes →"
+  },
+  "contact": {
+    "title": "Fale Conosco",
+    "subtitle": "Envie sua mensagem ou entre em contato pelos canais abaixo.",
+    "phone": "Telefone",
+    "email": "E-mail",
+    "address": "Endereço",
+    "whats": "Chamar no WhatsApp"
+  },
+  "form": {
+    "name": "Nome",
+    "email": "E-mail",
+    "phone": "Telefone",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "send": "Enviar",
+    "sending": "Enviando..."
+  }
+}

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portugal Engenharia</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS principal (com bust de cache) -->
+  <link id="css-main" rel="stylesheet" href="./style.css?v=2025-08-13-02">
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container header-bar">
+    <!-- Marca -->
+    <a class="brand" href="./index.html" style="text-decoration:none;font-weight:800;color:var(--ink)">
+      Portugal Engenharia
+    </a>
+
+    <!-- Navegação (desktop) -->
+    <nav class="nav" id="main-nav">
+      <a data-nav="home"      href="./index.html">Home</a>
+      <a data-nav="about"     href="./sobre.html">Sobre</a>
+      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="contact"   href="./contato.html">Contato</a>
+    </nav>
+
+    <!-- Idiomas (desktop) -->
+    <div class="lang" id="lang-switch">
+      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
+      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
+      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+    </div>
+
+    <!-- Hambúrguer (mobile) -->
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-panel" aria-label="Abrir menu">☰</button>
+  </div>
+
+  <!-- Painel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <nav class="nav mobile">
+      <a data-nav="home"      href="./index.html">Home</a>
+      <a data-nav="about"     href="./sobre.html">Sobre</a>
+      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="contact"   href="./contato.html">Contato</a>
+    </nav>
+    <div class="lang mobile" style="margin-top:10px;display:flex;gap:8px">
+      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
+      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
+      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+    </div>
+    <a class="btn btn-primary block" href="./contato.html" style="margin-top:12px;text-align:center" data-i18n="home.cta.button"></a>
+  </div>
+</header>
+
+<!-- Carrega o app.js (i18n e comportamentos) -->
+<script src="./app.js" type="module"></script>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="center">
+        <h1 class="title">
+          <span data-i18n="home.hero.title.a"></span>
+          <span class="accent" data-i18n="home.hero.title.b"></span>
+          <span data-i18n="home.hero.title.c"></span>
+          <span class="accent" data-i18n="home.hero.title.d"></span>
+        </h1>
+        <p class="muted" style="max-width:800px;margin:14px auto 0 auto" data-i18n="home.hero.subtitle"></p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#contato" data-i18n="home.hero.ctaPhone"></a>
+          <a class="btn btn-ghost" href="#portfolio" data-i18n="home.hero.ctaProjects"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIG NUMBERS -->
+  <section class="strip">
+    <div class="container section" style="padding-block:48px">
+      <div class="metrics">
+        <div>
+          <div class="metric-n">1200+</div>
+          <div class="metric-t" data-i18n="home.numbers.clients"></div>
+        </div>
+        <div>
+          <div class="metric-n">35+</div>
+          <div class="metric-t" data-i18n="home.numbers.works"></div>
+        </div>
+        <div>
+          <div class="metric-n">2500+</div>
+          <div class="metric-t" data-i18n="home.numbers.approved"></div>
+        </div>
+        <div>
+          <div class="metric-n">45+</div>
+          <div class="metric-t" data-i18n="home.numbers.certs"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS (cards) -->
+  <section id="servicos" class="surface section">
+    <div class="container">
+      <div class="services-header">
+        <h2 style="color:var(--brand)" data-i18n="home.services.title"></h2>
+        <p class="muted" style="margin-top:12px" data-i18n="home.services.subtitle"></p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="title" data-i18n="home.services.cards.res.title"></div>
+          <p class="muted" style="margin-top:6px" data-i18n="home.services.cards.res.desc"></p>
+          <a class="link" href="#portfolio" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
+        </article>
+
+        <article class="card">
+          <div class="title" data-i18n="home.services.cards.ind.title"></div>
+          <p class="muted" style="margin-top:6px" data-i18n="home.services.cards.ind.desc"></p>
+          <a class="link" href="#portfolio" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
+        </article>
+
+        <article class="card">
+          <div class="title" data-i18n="home.services.cards.inf.title"></div>
+          <p class="muted" style="margin-top:6px" data-i18n="home.services.cards.inf.desc"></p>
+          <a class="link" href="#portfolio" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPLIT 1 -->
+  <section class="section" data-split="split1">
+    <div class="container grid cols-2" style="align-items:center;gap:28px">
+      <div>
+       <h2 style="color:var(--brand)" data-i18n="home.split1.title"></h2>
+<p class="muted" style="margin-top:10px" data-i18n="home.split1.desc"></p>
+<div class="grid" style="margin-top:16px">
+  <div class="pill" data-i18n="home.split1.pills.0"></div>
+  <div class="pill" data-i18n="home.split1.pills.1"></div>
+  <div class="pill" data-i18n="home.split1.pills.2"></div>
+  <div class="pill" data-i18n="home.split1.pills.3"></div>
+</div>
+  </section>
+
+  <!-- SPLIT 2 -->
+  <section class="surface section" data-split="split2">
+    <div class="container grid cols-2" style="align-items:center;gap:28px">
+      <div class="img-tile">
+        <div class="img" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop')"></div>
+      </div>
+      <div>
+        <h2 style="color:var(--brand)" data-i18n="home.split2.title"></h2>
+<p class="muted" style="margin-top:10px" data-i18n="home.split2.desc"></p>
+<div class="grid" style="margin-top:16px">
+  <div class="pill" data-i18n="home.split2.pills.0"></div>
+  <div class="pill" data-i18n="home.split2.pills.1"></div>
+  <div class="pill" data-i18n="home.split2.pills.2"></div>
+  <div class="pill" data-i18n="home.split2.pills.3"></div>
+</div>
+  </section>
+
+  <!-- SPLIT 3 -->
+  <section class="section" data-split="split3">
+    <div class="container grid cols-2" style="align-items:center;gap:28px">
+      <div>
+       <h2 style="color:var(--brand)" data-i18n="home.split3.title"></h2>
+<p class="muted" style="margin-top:10px" data-i18n="home.split3.desc"></p>
+<div class="grid" style="margin-top:16px">
+  <div class="pill" data-i18n="home.split3.pills.0"></div>
+  <div class="pill" data-i18n="home.split3.pills.1"></div>
+  <div class="pill" data-i18n="home.split3.pills.2"></div>
+  <div class="pill" data-i18n="home.split3.pills.3"></div>
+</div>
+  </section>
+
+  <section class="cta-full">
+  <div class="cta-content" style="text-align:center">
+    <h3 style="color:#fff" data-i18n="home.cta.title"></h3>
+    <p data-i18n="home.cta.subtitle"></p>
+    <a href="./contato.html" class="btn btn-light" data-i18n="home.cta.button"></a>
+  </div>
+</section>
+
+
+ <footer class="site-footer">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h4>Portugal Engenharia</h4>
+        <p data-i18n="footer.companyText"></p>
+      </div>
+      <div>
+        <h4 data-i18n="footer.quickLinks"></h4>
+        <div class="list" style="gap:8px">
+          <a data-nav="about" href="./sobre.html" data-i18n="footer.nav.about"></a>
+          <a data-nav="portfolio" href="./portfolio.html" data-i18n="footer.nav.portfolio"></a>
+          <a data-nav="contact" href="./contato.html" data-i18n="footer.nav.contact"></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="footer.contact"></h4>
+        <div class="list" style="gap:6px">
+          <a href="tel:+553432311080">(34) 3231-1080</a>
+          <a href="mailto:portugalgeng.comercial@gmail.com">portugalgeng.comercial@gmail.com</a>
+          <span>Av. Profa. Juvenília dos Santos, 1432 — Santa Mônica — Uberlândia</span>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      © <span id="year"></span> Portugal Engenharia —
+      <span data-i18n="footer.rights"></span>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- (Opcional) carregar o app.js também ao final; manter uma única vez já é suficiente -->
+<script src="./app.js" type="module"></script>
+</body>
+</html>

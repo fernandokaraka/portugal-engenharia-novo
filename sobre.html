@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portugal Engenharia</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS principal (com bust de cache) -->
+  <link id="css-main" rel="stylesheet" href="./style.css?v=2025-08-13-02">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-bar">
+    <!-- Marca -->
+    <a class="brand" href="./index.html" style="text-decoration:none;font-weight:800;color:var(--ink)">
+      Portugal Engenharia
+    </a>
+
+    <!-- Navegação (desktop) -->
+    <nav class="nav" id="main-nav">
+      <a data-nav="home"      href="./index.html">Home</a>
+      <a data-nav="about"     href="./sobre.html">Sobre</a>
+      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="contact"   href="./contato.html">Contato</a>
+    </nav>
+
+    <!-- Idiomas (desktop) -->
+    <div class="lang" id="lang-switch">
+      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
+      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
+      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+    </div>
+
+    <!-- Hambúrguer (mobile) -->
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-panel" aria-label="Abrir menu">
+      ☰
+    </button>
+  </div>
+
+
+    <!-- Painel mobile -->
+  <div class="mobile-panel" id="mobile-panel">
+    <nav class="nav mobile">
+      <a data-nav="home"      href="./index.html">Home</a>
+      <a data-nav="about"     href="./sobre.html">Sobre</a>
+      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="contact"   href="./contato.html">Contato</a>
+    </nav>
+    <div class="lang mobile" style="margin-top:10px;display:flex;gap:8px">
+      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
+      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
+      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+    </div>
+    <a class="btn btn-primary block" href="./contato.html" style="margin-top:12px;text-align:center">Solicitar Orçamento</a>
+  </div>
+</header>
+
+
+<!-- Importante: garantir que o app.js seja carregado -->
+<script src="./app.js" type="module"></script>
+
+
+  <main>
+    <!-- HERO (igual ao da Home) -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-inner">
+    <h1>
+      <span>Compromisso com</span>
+      <span class="accent">Segurança</span>
+      <span>e</span>
+      <span class="accent-alt">Resultados</span>
+    </h1>
+    <p class="muted">
+      Mais de duas décadas atendendo segmentos industriais e civis com soluções integradas,
+      gestão de projetos e execução com qualidade.
+    </p>
+  </div>
+</section>
+
+<!-- CARROSSEL FULL-WIDTH (auto, sem setas/pontos) -->
+<section class="carousel" data-carousel>
+  <!-- Troque os paths pelas suas imagens (ex.: ./assets/sobre/01.jpg ...) -->
+  <div class="slide active" style="background-image:url('./images/1.jpeg')"></div>
+  <div class="slide"        style="background-image:url('./images/1.jpeg')"></div>
+  <div class="slide"        style="background-image:url('./images/1.jpeg')"></div>
+  <div class="slide"        style="background-image:url('./images/1.jpeg')"></div>
+  <div class="slide"        style="background-image:url('./images/1.jpeg')"></div>
+</section>
+
+
+  <!-- Missão / Visão -->
+  <section class="container section" style="display:grid;gap:24px;grid-template-columns:1fr;align-items:start">
+    <div class="card">
+      <h2 class="text-brand" data-i18n="about.mission"></h2>
+      <p class="mt-3" data-i18n="about.missionText"></p>
+    </div>
+    <div class="card">
+      <h2 class="text-brand" data-i18n="about.vision"></h2>
+      <p class="mt-3" data-i18n="about.visionText"></p>
+    </div>
+  </section>
+
+  <!-- Pilares -->
+  <section class="section" style="background:var(--surface)">
+    <div class="container">
+      <h2 class="text-brand" data-i18n="about.pillarsTitle"></h2>
+      <div id="pillars" class="cards" style="margin-top:24px"></div>
+    </div>
+  </section>
+
+  <!-- Como trabalhamos -->
+  <section class="container section" style="display:grid;gap:24px;grid-template-columns:1fr;align-items:start">
+    <div>
+      <h2 class="text-brand" data-i18n="about.how.title"></h2>
+      <p class="mt-3" data-i18n="about.how.subtitle"></p>
+      <ul id="how-steps" class="cards" style="margin-top:16px"></ul>
+    </div>
+    <div class="img-tile" style="height:320px">
+      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1581093588401-16a9cfd9b8f0?q=80&w=1600&auto=format&fit=crop')"></div>
+    </div>
+  </section>
+
+  <!-- Métricas -->
+  <section class="border-y" style="border-block:1px solid rgba(0,0,0,.05)">
+    <div class="container section">
+      <div class="grid-4" style="display:grid;gap:24px;grid-template-columns:repeat(4,1fr);text-align:center">
+        <div><div class="text-5xl" style="font-size:40px;font-weight:800">1200+</div><div class="mt-2" data-i18n="about.metrics.clients"></div></div>
+        <div><div class="text-5xl" style="font-size:40px;font-weight:800">35+</div><div class="mt-2" data-i18n="about.metrics.works"></div></div>
+        <div><div class="text-5xl" style="font-size:40px;font-weight:800">2500+</div><div class="mt-2" data-i18n="about.metrics.approved"></div></div>
+        <div><div class="text-5xl" style="font-size:40px;font-weight:800">45+</div><div class="mt-2" data-i18n="about.metrics.certs"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container section" style="text-align:center;color:#6b7280">
+    <small>© <span id="year"></span> Portugal Engenharia</small>
+  </footer>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>

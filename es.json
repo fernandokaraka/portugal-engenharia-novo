@@ -1,0 +1,99 @@
+{
+  "home": {
+    "hero": {
+      "title": { "a": "Construyendo su Futuro con", "b": "Innovación", "c": "y", "d": "Calidad" },
+      "subtitle": "Empresa de ingeniería civil reconocida por ofrecer soluciones integrales para obras y proyectos de infraestructura.",
+      "ctaPhone": "Contacto +55 (34) 3231-1080",
+      "ctaProjects": "Ver proyectos"
+    },
+    "numbers": {
+      "clients": "Clientes Satisfechos",
+      "works": "Obras Entregadas",
+      "approved": "Proyectos Aprobados",
+      "certs": "Certificaciones"
+    },
+    "services": {
+      "title": "Nuestros Servicios Destacados",
+      "subtitle": "Desde infraestructura urbana hasta montaje industrial, unimos planificación, tecnología y ejecución para entregar obras seguras y de alto rendimiento.",
+      "cards": {
+        "res": { "title": "Residenciales", "desc": "Ejecución y gestión de obras residenciales." },
+        "ind": { "title": "Comerciales e Industriales", "desc": "Proyectos y obras para negocios e industrias." },
+        "inf": { "title": "Infraestructura", "desc": "Pavimentación, drenaje, urbanismo y loteos." },
+        "link": "Ver proyectos →"
+      }
+    },
+    "split1": {
+      "title": "Soluciones Industriales",
+      "desc": "Montaje y mantenimiento industrial enfocados en calderería, tuberías, soldaduras especiales y gestión de obra. Aplicamos HSE y control de calidad en todo el proceso.",
+      "pills": ["Calderería", "Tuberías", "Soldaduras especiales", "Gestión de obra"]
+    },
+    "split2": {
+      "title": "Infraestructura Urbana",
+      "desc": "Pavimentación asfáltica, drenaje y galerías. Planificación para reducir el impacto en el tránsito y cumplir plazos.",
+      "pills": ["Pavimentación y drenaje", "Galerías", "Señalización", "Control tecnológico"]
+    },
+    "split3": {
+      "title": "Proyectos a Medida",
+      "desc": "Refrigeración (amoníaco/agua helada), salas de máquinas, redes y aislamiento térmico. Ingeniería a la medida para necesidades específicas.",
+      "pills": ["Amoníaco", "Agua helada", "Sala de máquinas", "Aislamiento térmico"]
+    },
+    "cta": {
+      "title": "¿Listo para empezar su proyecto?",
+      "subtitle": "Hable con nosotros y reciba una propuesta personalizada.",
+      "button": "Solicitar Presupuesto"
+    }
+  },
+  "about": {
+    "heroTitle": "Sobre Portugal Engenharia",
+    "heroSubtitle": "Más de 25 años construyendo con calidad, innovación y compromiso con la excelencia.",
+    "mission": "Misión",
+    "missionText": "Brindar soluciones basadas en Gestión de Proyectos, Ingeniería y HSE (Salud, Seguridad y Medio Ambiente).",
+    "vision": "Visión",
+    "visionText": "Ser referencia en el sector civil e industrial, trabajando por un entorno más sostenible.",
+    "pillarsTitle": "Nuestros Pilares",
+    "pillars": [
+      { "title": "Tecnología", "desc": "Control de procesos y tecnología en todas las etapas." },
+      { "title": "Insumos", "desc": "Materiales de calidad y proveedores homologados." },
+      { "title": "Planificación", "desc": "Gestión de plazos, costos y seguridad enfocada en resultados." }
+    ],
+    "how": {
+      "title": "Cómo trabajamos",
+      "subtitle": "Enfoque conservador y eficiente, adecuado al perfil local.",
+      "steps": [
+        "Relevamiento técnico y definición de alcance",
+        "Planificación de plazos, costos y HSE",
+        "Ejecución con control de calidad",
+        "Puesta en marcha y entrega técnica"
+      ]
+    },
+    "metrics": {
+      "clients": "Clientes Satisfechos",
+      "works": "Obras Entregadas",
+      "approved": "Proyectos Aprobados",
+      "certs": "Certificaciones"
+    }
+  },
+  "portfolio": {
+    "title": "Portafolio",
+    "subtitle": "Proyectos seleccionados que muestran nuestra experiencia.",
+    "filters": { "todos": "Todos", "industrial": "Comerciales e Industriales", "infra": "Infraestructura", "refrigeracao": "Refrigeración" },
+    "seeMore": "Ver detalles →"
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Envíe su mensaje o use los canales abajo.",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "address": "Dirección",
+    "whats": "Hablar por WhatsApp"
+  },
+  "form": {
+    "name": "Nombre",
+    "email": "Correo",
+    "phone": "Teléfono",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "sending": "Enviando..."
+  }
+}
