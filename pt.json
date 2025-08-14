@@ -3,7 +3,7 @@
     "hero": {
       "title": { "a": "Construindo Seu Futuro com", "b": "Inovação", "c": "e", "d": "Qualidade" },
       "subtitle": "Uma empresa renomada no setor de engenharia civil dedicada a oferecer soluções abrangentes para projetos de construção e infraestrutura.",
-      "ctaPhone": "Contato (34) 3231-1080",
+      "ctaPhone": "Contato",
       "ctaProjects": "Ver projetos"
     },
     "numbers": {
@@ -19,7 +19,7 @@
         "res": { "title": "Residenciais", "desc": "Execução e gerenciamento de obras residenciais." },
         "ind": { "title": "Comerciais & Industriais", "desc": "Projetos e obras para negócios e indústrias." },
         "inf": { "title": "Infraestrutura", "desc": "Pavimentação, drenagem, loteamentos e urbanismo." },
-        "link": "Ver projetos →"
+        "link": "Saiba mais →"
       }
     },
     "split1": {
@@ -43,7 +43,45 @@
       "button": "Solicitar Orçamento"
     }
   },
+  "careers": {
+    "title": "Trabalhe Conosco",
+    "subtitle": "Faça parte do nosso time. Buscamos profissionais comprometidos com segurança, qualidade e excelência.",
+    "team": "Nossa equipe",
+    "teamSubtitle": "Conheça algumas das pessoas que constroem nossos projetos.",
+    "clients": "Clientes",
+    "clientsSubtitle": "Algumas empresas com quem já trabalhamos.",
+    "clientsBadges": {"a": "Cliente A", "b": "Cliente B", "c": "Cliente C", "d": "Cliente D"},
+    "cta": {"view": "Ver oportunidades", "send": "Enviar currículo"},
+    "teamCards": {
+      "eng": {"title": "Eng. de Campo", "desc": "Execução e SSMA"},
+      "tech": {"title": "Técnico de Obras", "desc": "Controle tecnológico"},
+      "plan": {"title": "Planejamento", "desc": "Prazo e custo"},
+      "qual": {"title": "Qualidade", "desc": "Inspeção e ensaios"}
+    },
+    "form": {
+      "title": "Envie seu currículo",
+      "subtitle": "Preencha seus dados e anexe seu currículo em PDF. Entraremos em contato quando houver uma oportunidade compatível.",
+      "name": "Nome",
+      "email": "E-mail",
+      "phone": "Telefone",
+      "area": "Área de interesse",
+      "areaPh": "Ex.: Obras, Industrial, Planejamento",
+      "message": "Mensagem",
+      "messagePh": "Fale brevemente sobre sua experiência",
+      "resume": "Currículo (PDF)",
+      "send": "Enviar"
+    }
+  },
   "about": {
+    "motion": {
+      "title": "Obras em movimento",
+      "subtitle": "Alguns registros do nosso dia a dia em campo — execução com segurança, qualidade e compromisso com o prazo."
+    },
+    "clients": {
+      "title": "Clientes",
+      "subtitle": "Algumas empresas com quem já trabalhamos.",
+      "badges": {"a": "Cliente A", "b": "Cliente B", "c": "Cliente C", "d": "Cliente D"}
+    },
     "heroTitle": "Sobre a Portugal Engenharia",
     "heroSubtitle": "Mais de 25 anos construindo com qualidade, inovação e compromisso com a excelência em cada projeto.",
     "mission": "Missão",
@@ -86,7 +124,7 @@
   "footer": {
     "companyText": "Engenharia civil e industrial com foco em planejamento, qualidade e segurança.",
     "quickLinks": "Links rápidos",
-    "nav": {"about": "Sobre", "portfolio": "Portfólio", "contact": "Contato"},
+    "nav": {"about": "Sobre", "portfolio": "Portfólio", "careers": "Trabalhe Conosco", "contact": "Contato"},
     "contact": "Contato",
     "follow": "Siga nas redes",
     "social": {"linkedin": "LinkedIn", "instagram": "Instagram", "facebook": "Facebook"},

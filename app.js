@@ -48,6 +48,13 @@ function fillTexts(messages) {
     if (typeof val === 'string') el.textContent = val;
   });
 
+  // Placeholders dinâmicos
+  $$('[data-i18n-placeholder]').forEach(el => {
+    const key = el.getAttribute('data-i18n-placeholder');
+    const val = get(messages, key);
+    if (typeof val === 'string') el.setAttribute('placeholder', val);
+  });
+
   // Pilares (sobre)
   const pillars = get(messages, 'about.pillars') || [];
   const pillarsRoot = $('#pillars');
@@ -93,7 +100,7 @@ function initHeaderNav(lang, messages) {
   const routes = {
     home: './',
     about: './sobre.html',
-    portfolio: './portfolio.html',
+    careers: './trabalhe-conosco.html',
     contact: './contato.html'
   };
 
@@ -115,9 +122,9 @@ function initHeaderNav(lang, messages) {
 
   // Labels do menu: tenta pegar do JSON, senão usa defaults
   const labels = get(messages, 'nav') || {
-    pt: {home:'Home', about:'Sobre', portfolio:'Portfólio', contact:'Contato'},
-    en: {home:'Home', about:'About', portfolio:'Portfolio', contact:'Contact'},
-    es: {home:'Inicio', about:'Sobre', portfolio:'Portafolio', contact:'Contacto'}
+    pt: {home:'Home', about:'Sobre', careers:'Trabalhe Conosco', contact:'Contato'},
+    en: {home:'Home', about:'About', careers:'Careers', contact:'Contact'},
+    es: {home:'Inicio', about:'Sobre', careers:'Trabaje con nosotros', contact:'Contacto'}
   }[lang];
 
   if (labels) {
@@ -127,7 +134,7 @@ function initHeaderNav(lang, messages) {
     };
     set('home',      labels.home);
     set('about',     labels.about);
-    set('portfolio', labels.portfolio);
+    set('careers', labels.careers);
     set('contact',   labels.contact);
   }
 
@@ -265,12 +272,51 @@ function initForm(messages) {
       // honeypot simples
       if (data._gotcha) throw new Error('spam');
 
-      const resp = await fetch('/api/contact', {
+      const action = form.getAttribute('action') || './send.php';
+      const resp = await fetch(action, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
       });
 
+      if (!resp.ok) {
+        const text = await resp.text();
+        throw new Error(text || 'Request failed');
+      }
+      if (status) status.textContent = sentOk;
+      form.reset();
+    }catch(err){
+      console.error(err);
+      if (status) {
+        const msg = (err && err.message) ? err.message : String(err);
+        status.textContent = sentErr + (msg ? ` — ${msg}` : '');
+      }
+    }finally{
+      if (btn) { btn.disabled = false; btn.textContent = get(messages, 'form.send') || 'Enviar'; }
+    }
+  });
+}
+
+/* ---------------------- Careers Form (multipart) ---------------------- */
+function initCareersForm(messages){
+  const form = document.querySelector('#careers-form');
+  if (!form) return;
+  const sending = get(messages, 'form.sending') || 'Enviando...';
+  const sentOk  = get(messages, 'form.sentOk')  || 'Mensagem enviada com sucesso!';
+  const sentErr = get(messages, 'form.sentErr') || 'Falha ao enviar. Tente novamente.';
+
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
+    const btn = form.querySelector('button');
+    const status = document.querySelector('#form-status');
+    if (btn) { btn.disabled = true; btn.textContent = sending; }
+    if (status) status.textContent = '';
+
+    try{
+      const fd = new FormData(form);
+      if (fd.get('_gotcha')) throw new Error('spam');
+      const action = form.getAttribute('action') || './send.php';
+      const resp = await fetch(action, { method:'POST', body: fd });
       if (!resp.ok) {
         const text = await resp.text();
         throw new Error(text || 'Request failed');
@@ -338,6 +384,27 @@ function normalizeHomeURL(lang) {
   }
 }
 
+/* --------------------- intl-tel-input setup --------------------- */
+function setupIntlTel(inputId){
+  const input = document.getElementById(inputId);
+  if (!input || typeof window.intlTelInput !== 'function') return;
+  const iti = window.intlTelInput(input, {
+    initialCountry: 'br',
+    separateDialCode: true,
+    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@18.3.3/build/js/utils.js',
+    preferredCountries: ['br','us','es','pt','ar'],
+  });
+  // Normalize number on submit by replacing input value with E.164
+  const form = input.closest('form');
+  if (form){
+    form.addEventListener('submit', () => {
+      try{
+        const number = iti.getNumber();
+        if (number) input.value = number; // ex: +5511999999999
+      }catch{}
+    });
+  }
+}
 /* ---------------------------- Boot ---------------------------- */
 async function applyLang(lang) {
   if (!SUPPORTED.includes(lang)) lang = DEFAULT_LANG;
@@ -351,10 +418,15 @@ async function applyLang(lang) {
   initPortfolio(messages, lang);
   initProjectDetail();
   initForm(messages);
+  initCareersForm(messages);
   initCarousel();
 
   const y = $('#year');
   if (y) y.textContent = new Date().getFullYear();
+
+  // Phone fields with intl-tel-input
+  setupIntlTel('contact-phone');
+  setupIntlTel('careers-phone');
 }
 
 (async function boot() {

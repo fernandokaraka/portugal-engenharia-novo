@@ -3,7 +3,7 @@
     "hero": {
       "title": { "a": "Building Your Future with", "b": "Innovation", "c": "and", "d": "Quality" },
       "subtitle": "A renowned civil engineering company delivering comprehensive solutions for construction and infrastructure projects.",
-      "ctaPhone": "Contact +55 (34) 3231-1080",
+      "ctaPhone": "Contact",
       "ctaProjects": "View projects"
     },
     "numbers": {
@@ -43,7 +43,45 @@
       "button": "Request a Quote"
     }
   },
+  "careers": {
+    "title": "Careers",
+    "subtitle": "Join our team. We look for professionals committed to safety, quality and excellence.",
+    "team": "Our team",
+    "teamSubtitle": "Meet some of the people behind our projects.",
+    "clients": "Clients",
+    "clientsSubtitle": "Some companies we've worked with.",
+    "clientsBadges": {"a": "Client A", "b": "Client B", "c": "Client C", "d": "Client D"},
+    "cta": {"view": "See opportunities", "send": "Send resume"},
+    "teamCards": {
+      "eng": {"title": "Site Engineer", "desc": "Execution & HSE"},
+      "tech": {"title": "Site Technician", "desc": "Technological control"},
+      "plan": {"title": "Planning", "desc": "Schedule & cost"},
+      "qual": {"title": "Quality", "desc": "Inspection & testing"}
+    },
+    "form": {
+      "title": "Send your resume",
+      "subtitle": "Fill out your details and attach your PDF resume. We'll contact you when a matching opportunity arises.",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "area": "Area of interest",
+      "areaPh": "e.g., Civil works, Industrial, Planning",
+      "message": "Message",
+      "messagePh": "Briefly describe your experience",
+      "resume": "Resume (PDF)",
+      "send": "Send"
+    }
+  },
   "about": {
+    "motion": {
+      "title": "Works in motion",
+      "subtitle": "Some records from our daily fieldwork — executed with safety, quality and commitment to schedule."
+    },
+    "clients": {
+      "title": "Clients",
+      "subtitle": "Some companies we've worked with.",
+      "badges": {"a": "Client A", "b": "Client B", "c": "Client C", "d": "Client D"}
+    },
     "heroTitle": "About Portugal Engenharia",
     "heroSubtitle": "Over 25 years building with quality, innovation and commitment to excellence.",
     "mission": "Mission",
@@ -86,7 +124,7 @@
   "footer": {
     "companyText": "Civil and industrial engineering focused on planning, quality and safety.",
     "quickLinks": "Quick links",
-    "nav": {"about": "About", "portfolio": "Portfolio", "contact": "Contact"},
+    "nav": {"about": "About", "portfolio": "Portfolio", "careers": "Careers", "contact": "Contact"},
     "contact": "Contact",
     "follow": "Follow us",
     "social": {"linkedin": "LinkedIn", "instagram": "Instagram", "facebook": "Facebook"},

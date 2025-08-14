@@ -11,28 +11,30 @@
 
   <!-- CSS principal (com bust de cache) -->
   <link id="css-main" rel="stylesheet" href="./style.css?v=2025-08-13-02">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true">
+  <link rel="apple-touch-icon" href="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true">
 </head>
 <body>
 <header class="site-header">
   <div class="container header-bar">
     <!-- Marca -->
     <a class="brand" href="./index.html" style="text-decoration:none;font-weight:800;color:var(--ink)">
-      Portugal Engenharia
+      <img src="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true" alt="Portugal Engenharia" class="brand-logo" />
     </a>
 
     <!-- Navegação (desktop) -->
     <nav class="nav" id="main-nav">
       <a data-nav="home"      href="./index.html">Home</a>
       <a data-nav="about"     href="./sobre.html">Sobre</a>
-      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="careers"   href="./trabalhe-conosco.html">Trabalhe Conosco</a>
       <a data-nav="contact"   href="./contato.html">Contato</a>
     </nav>
 
     <!-- Idiomas (desktop) -->
     <div class="lang" id="lang-switch">
-      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
-      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
-      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+      <button class="lang-btn btn-ghost flag" data-lang="pt" aria-label="Português" title="Português"></button>
+      <button class="lang-btn btn-ghost flag" data-lang="en" aria-label="English" title="English"></button>
+      <button class="lang-btn btn-ghost flag" data-lang="es" aria-label="Español" title="Español"></button>
     </div>
 
     <!-- Hambúrguer (mobile) -->
@@ -47,13 +49,13 @@
     <nav class="nav mobile">
       <a data-nav="home"      href="./index.html">Home</a>
       <a data-nav="about"     href="./sobre.html">Sobre</a>
-      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="careers"   href="./trabalhe-conosco.html">Trabalhe Conosco</a>
       <a data-nav="contact"   href="./contato.html">Contato</a>
     </nav>
     <div class="lang mobile" style="margin-top:10px;display:flex;gap:8px">
-      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
-      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
-      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+      <button class="lang-btn btn-ghost flag" data-lang="pt" aria-label="Português" title="Português"></button>
+      <button class="lang-btn btn-ghost flag" data-lang="en" aria-label="English" title="English"></button>
+      <button class="lang-btn btn-ghost flag" data-lang="es" aria-label="Español" title="Español"></button>
     </div>
     <a class="btn btn-primary block" href="./contato.html" style="margin-top:12px;text-align:center">Solicitar Orçamento</a>
   </div>
@@ -66,7 +68,7 @@
 
   <main>
     <!-- HERO (igual ao da Home) -->
-<section class="hero reveal">
+<section class="hero about reveal">
   <div class="hero-overlay"></div>
   <div class="container hero-inner">
     <h1>
@@ -103,8 +105,8 @@
   <!-- Marquee Carousel contínuo, abaixo de Missão/Visão/Valores -->
   <section class="section reveal" style="padding-top: 0">
     <div class="container">
-      <h2 class="text-brand" style="margin-bottom:12px">Obras em movimento</h2>
-      <p class="muted" style="margin-top:0;margin-bottom:14px">Alguns registros do nosso dia a dia em campo — execução com segurança, qualidade e compromisso com o prazo.</p>
+      <h2 class="text-brand" style="margin-bottom:12px" data-i18n="about.motion.title"></h2>
+      <p class="muted" style="margin-top:0;margin-bottom:14px" data-i18n="about.motion.subtitle"></p>
       <section class="marquee">
         <div class="track">
           <!-- bloco A -->
@@ -146,6 +148,20 @@
     </div>
   </section>
 
+  <!-- Clientes (novo bloco também no Sobre) -->
+  <section class="section clients reveal">
+    <div class="container">
+      <h2 class="text-brand" data-i18n="about.clients.title"></h2>
+      <p class="muted" style="margin-top:8px" data-i18n="about.clients.subtitle"></p>
+      <div class="clients-logos" style="margin-top:18px">
+        <div class="client-badge" data-i18n="about.clients.badges.a"></div>
+        <div class="client-badge" data-i18n="about.clients.badges.b"></div>
+        <div class="client-badge" data-i18n="about.clients.badges.c"></div>
+        <div class="client-badge" data-i18n="about.clients.badges.d"></div>
+      </div>
+    </div>
+  </section>
+
   <!-- Como trabalhamos -->
   <section class="container section reveal" style="display:grid;gap:24px;grid-template-columns:1fr;align-items:start">
     <div>
@@ -154,10 +170,11 @@
       <ul id="how-steps" class="cards" style="margin-top:16px; list-style:none; padding:0;">
       </ul>
     </div>
-    <div class="img-tile" style="height:380px">
-      <div class="img" style="background-image:url('https://images.unsplash.com/photo-1581093588401-16a9cfd9b8f0?q=80&w=1600&auto=format&fit=crop')"></div>
+    <div class="img-tile" style="aspect-ratio:16/6">
+      <div class="img" style="background-image:url('./images/3.jpg')"></div>
     </div>
   </section>
+
 
   <!-- CTA final (igual da Home) -->
   <section class="cta-full">
@@ -167,6 +184,7 @@
       <a href="./contato.html" class="btn btn-light" data-i18n="home.cta.button"></a>
     </div>
   </section>
+
 
   <footer class="site-footer">
     <div class="wrap">
@@ -179,7 +197,7 @@
           <h4 data-i18n="footer.quickLinks"></h4>
           <div class="list" style="gap:8px">
             <a data-nav="about" href="./sobre.html" data-i18n="footer.nav.about"></a>
-            <a data-nav="portfolio" href="./portfolio.html" data-i18n="footer.nav.portfolio"></a>
+            <a data-nav="careers" href="./trabalhe-conosco.html" data-i18n="footer.nav.careers"></a>
             <a data-nav="contact" href="./contato.html" data-i18n="footer.nav.contact"></a>
           </div>
         </div>
@@ -194,6 +212,7 @@
         <div>
           <h4 data-i18n="footer.contact"></h4>
           <div class="list" style="gap:6px">
+            <span>Dir. comercial: Elano Teixeira Leite Júnior <br> <a href="tel:+5534997981080">(34) 99798-1080</a></span>
             <a href="tel:+553432311080">(34) 3231-1080</a>
             <a href="mailto:portugalgeng.comercial@gmail.com">portugalgeng.comercial@gmail.com</a>
             <span>Av. Profa. Juvenília dos Santos, 1432 — Santa Mônica — Uberlândia</span>

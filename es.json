@@ -3,7 +3,7 @@
     "hero": {
       "title": { "a": "Construyendo su Futuro con", "b": "Innovación", "c": "y", "d": "Calidad" },
       "subtitle": "Empresa de ingeniería civil reconocida por ofrecer soluciones integrales para obras y proyectos de infraestructura.",
-      "ctaPhone": "Contacto +55 (34) 3231-1080",
+      "ctaPhone": "Contacto",
       "ctaProjects": "Ver proyectos"
     },
     "numbers": {
@@ -43,7 +43,45 @@
       "button": "Solicitar Presupuesto"
     }
   },
+  "careers": {
+    "title": "Trabaje con nosotros",
+    "subtitle": "Únase a nuestro equipo. Buscamos profesionales comprometidos con la seguridad, calidad y excelencia.",
+    "team": "Nuestro equipo",
+    "teamSubtitle": "Conozca a algunas de las personas que construyen nuestros proyectos.",
+    "clients": "Clientes",
+    "clientsSubtitle": "Algunas empresas con las que hemos trabajado.",
+    "clientsBadges": {"a": "Cliente A", "b": "Cliente B", "c": "Cliente C", "d": "Cliente D"},
+    "cta": {"view": "Ver oportunidades", "send": "Enviar currículum"},
+    "teamCards": {
+      "eng": {"title": "Ing. de campo", "desc": "Ejecución y HSE"},
+      "tech": {"title": "Técnico de obras", "desc": "Control tecnológico"},
+      "plan": {"title": "Planificación", "desc": "Plazo y costo"},
+      "qual": {"title": "Calidad", "desc": "Inspección y ensayos"}
+    },
+    "form": {
+      "title": "Envíe su currículum",
+      "subtitle": "Complete sus datos y adjunte su currículum en PDF. Le contactaremos cuando surja una oportunidad compatible.",
+      "name": "Nombre",
+      "email": "Correo",
+      "phone": "Teléfono",
+      "area": "Área de interés",
+      "areaPh": "Ej.: Obras, Industrial, Planificación",
+      "message": "Mensaje",
+      "messagePh": "Describa brevemente su experiencia",
+      "resume": "Currículum (PDF)",
+      "send": "Enviar"
+    }
+  },
   "about": {
+    "motion": {
+      "title": "Obras en movimiento",
+      "subtitle": "Algunos registros de nuestro día a día en campo — ejecución con seguridad, calidad y compromiso con el plazo."
+    },
+    "clients": {
+      "title": "Clientes",
+      "subtitle": "Algunas empresas con las que hemos trabajado.",
+      "badges": {"a": "Cliente A", "b": "Cliente B", "c": "Cliente C", "d": "Cliente D"}
+    },
     "heroTitle": "Sobre Portugal Engenharia",
     "heroSubtitle": "Más de 25 años construyendo con calidad, innovación y compromiso con la excelencia.",
     "mission": "Misión",
@@ -86,7 +124,7 @@
   "footer": {
     "companyText": "Ingeniería civil e industrial enfocada en planificación, calidad y seguridad.",
     "quickLinks": "Enlaces rápidos",
-    "nav": {"about": "Sobre", "portfolio": "Portafolio", "contact": "Contacto"},
+    "nav": {"about": "Sobre", "portfolio": "Portafolio", "careers": "Trabaje con nosotros", "contact": "Contacto"},
     "contact": "Contacto",
     "follow": "Síganos",
     "social": {"linkedin": "LinkedIn", "instagram": "Instagram", "facebook": "Facebook"},

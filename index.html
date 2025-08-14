@@ -11,6 +11,8 @@
 
   <!-- CSS principal (com bust de cache) -->
   <link id="css-main" rel="stylesheet" href="./style.css?v=2025-08-13-02">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true">
+  <link rel="apple-touch-icon" href="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true">
 </head>
 
 <body>
@@ -18,22 +20,22 @@
   <div class="container header-bar">
     <!-- Marca -->
     <a class="brand" href="./index.html" style="text-decoration:none;font-weight:800;color:var(--ink)">
-      Portugal Engenharia
+      <img src="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true" alt="Portugal Engenharia" class="brand-logo" />
     </a>
 
     <!-- Navegação (desktop) -->
     <nav class="nav" id="main-nav">
       <a data-nav="home"      href="./index.html">Home</a>
       <a data-nav="about"     href="./sobre.html">Sobre</a>
-      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="careers"   href="./trabalhe-conosco.html">Trabalhe Conosco</a>
       <a data-nav="contact"   href="./contato.html">Contato</a>
     </nav>
 
     <!-- Idiomas (desktop) -->
     <div class="lang" id="lang-switch">
-      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
-      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
-      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+      <button class="lang-btn btn-ghost flag" data-lang="pt" aria-label="Português" title="Português"></button>
+      <button class="lang-btn btn-ghost flag" data-lang="en" aria-label="English" title="English"></button>
+      <button class="lang-btn btn-ghost flag" data-lang="es" aria-label="Español" title="Español"></button>
     </div>
 
     <!-- Hambúrguer (mobile) -->
@@ -45,13 +47,13 @@
     <nav class="nav mobile">
       <a data-nav="home"      href="./index.html">Home</a>
       <a data-nav="about"     href="./sobre.html">Sobre</a>
-      <a data-nav="portfolio" href="./portfolio.html">Portfólio</a>
+      <a data-nav="careers"   href="./trabalhe-conosco.html">Trabalhe Conosco</a>
       <a data-nav="contact"   href="./contato.html">Contato</a>
     </nav>
     <div class="lang mobile" style="margin-top:10px;display:flex;gap:8px">
-      <button class="lang-btn btn-ghost" data-lang="pt">PT</button>
-      <button class="lang-btn btn-ghost" data-lang="en">EN</button>
-      <button class="lang-btn btn-ghost" data-lang="es">ES</button>
+      <button class="lang-btn btn-ghost flag" data-lang="pt" aria-label="Português" title="Português"></button>
+      <button class="lang-btn btn-ghost flag" data-lang="en" aria-label="English" title="English"></button>
+      <button class="lang-btn btn-ghost flag" data-lang="es" aria-label="Español" title="Español"></button>
     </div>
     <a class="btn btn-primary block" href="./contato.html" style="margin-top:12px;text-align:center" data-i18n="home.cta.button"></a>
   </div>
@@ -62,7 +64,7 @@
 
 <main>
   <!-- HERO -->
-  <section class="hero reveal">
+  <section class="hero home reveal">
     <div class="container hero-inner">
       <div class="center">
         <h1 class="title">
@@ -116,19 +118,19 @@
         <article class="card">
           <div class="title" data-i18n="home.services.cards.res.title"></div>
           <p class="muted" style="margin-top:6px" data-i18n="home.services.cards.res.desc"></p>
-          <a class="link" href="#portfolio" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
+          <a class="link" href="./sobre.html" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
         </article>
 
         <article class="card">
           <div class="title" data-i18n="home.services.cards.ind.title"></div>
           <p class="muted" style="margin-top:6px" data-i18n="home.services.cards.ind.desc"></p>
-          <a class="link" href="#portfolio" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
+          <a class="link" href="./sobre.html" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
         </article>
 
         <article class="card">
           <div class="title" data-i18n="home.services.cards.inf.title"></div>
           <p class="muted" style="margin-top:6px" data-i18n="home.services.cards.inf.desc"></p>
-          <a class="link" href="#portfolio" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
+          <a class="link" href="./sobre.html" style="margin-top:10px;display:inline-block" data-i18n="home.services.cards.link"></a>
         </article>
       </div>
     </div>
@@ -152,7 +154,7 @@
     <div class="img-tile">
       <div
         class="img"
-        style="background-image:url('./assets/home/split-1.jpg')"
+        style="background-image:url('./images/5-1.jpg')"
         aria-label="Imagem Split 1"
         role="img"
       ></div>
@@ -168,7 +170,7 @@
     <div class="img-tile">
       <div
         class="img"
-        style="background-image:url('https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/10.jpg?raw=truess')"
+        style="background-image:url('./images/1.jpg')"
         aria-label="Imagem Split 2"
         role="img"
       ></div>
@@ -206,7 +208,7 @@
     <div class="img-tile">
       <div
         class="img"
-        style="background-image:url('./assets/home/split-3.jpg')"
+        style="background-image:url('./images/6.jpg')"
         aria-label="Imagem Split 3"
         role="img"
       ></div>
@@ -235,7 +237,7 @@
         <h4 data-i18n="footer.quickLinks"></h4>
         <div class="list" style="gap:8px">
           <a data-nav="about" href="./sobre.html" data-i18n="footer.nav.about"></a>
-          <a data-nav="portfolio" href="./portfolio.html" data-i18n="footer.nav.portfolio"></a>
+          <a data-nav="careers" href="./trabalhe-conosco.html" data-i18n="footer.nav.careers"></a>
           <a data-nav="contact" href="./contato.html" data-i18n="footer.nav.contact"></a>
         </div>
       </div>
@@ -250,6 +252,8 @@
       <div>
         <h4 data-i18n="footer.contact"></h4>
         <div class="list" style="gap:6px">
+          
+          <span>Dir. comercial: Elano Teixeira Leite Júnior <br> <a href="tel:+5534997981080">(34) 99798-1080</a></span>
           <a href="tel:+553432311080">(34) 3231-1080</a>
           <a href="mailto:portugalgeng.comercial@gmail.com">portugalgeng.comercial@gmail.com</a>
           <span>Av. Profa. Juvenília dos Santos, 1432 — Santa Mônica — Uberlândia</span>

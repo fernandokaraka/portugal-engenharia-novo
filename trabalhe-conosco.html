@@ -3,59 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portugal Engenharia</title>
-
-  <!-- Fonts -->
+  <title>Trabalhe Conosco — Portugal Engenharia</title>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS principal (com bust de cache) -->
   <link id="css-main" rel="stylesheet" href="./style.css?v=2025-08-13-02">
   <link rel="icon" type="image/png" sizes="32x32" href="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true">
   <link rel="apple-touch-icon" href="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.3.3/build/css/intlTelInput.css">
 </head>
-
-
-
-
 <body>
- 
 <header class="site-header">
   <div class="container header-bar">
-    <!-- Marca -->
     <a class="brand" href="./index.html" style="text-decoration:none;font-weight:800;color:var(--ink)">
       <img src="https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/logo_portugal_engenharia.png?raw=true" alt="Portugal Engenharia" class="brand-logo" />
     </a>
-
-    <!-- Navegação (desktop) -->
     <nav class="nav" id="main-nav">
-      <a data-nav="home"      href="./index.html">Home</a>
-      <a data-nav="about"     href="./sobre.html">Sobre</a>
-      <a data-nav="careers"   href="./trabalhe-conosco.html">Trabalhe Conosco</a>
-      <a data-nav="contact"   href="./contato.html">Contato</a>
+      <a data-nav="home" href="./index.html">Home</a>
+      <a data-nav="about" href="./sobre.html">Sobre</a>
+      <a data-nav="careers" href="./trabalhe-conosco.html">Trabalhe Conosco</a>
+      <a data-nav="contact" href="./contato.html">Contato</a>
     </nav>
-
-    <!-- Idiomas (desktop) -->
     <div class="lang" id="lang-switch">
       <button class="lang-btn btn-ghost flag" data-lang="pt" aria-label="Português" title="Português"></button>
       <button class="lang-btn btn-ghost flag" data-lang="en" aria-label="English" title="English"></button>
       <button class="lang-btn btn-ghost flag" data-lang="es" aria-label="Español" title="Español"></button>
     </div>
-
-    <!-- Hambúrguer (mobile) -->
-    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-panel" aria-label="Abrir menu">
-      ☰
-    </button>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-panel" aria-label="Abrir menu">☰</button>
   </div>
-
-  <!-- Painel mobile -->
   <div class="mobile-panel" id="mobile-panel">
     <nav class="nav mobile">
-      <a data-nav="home"      href="./index.html">Home</a>
-      <a data-nav="about"     href="./sobre.html">Sobre</a>
-      <a data-nav="careers"   href="./trabalhe-conosco.html">Trabalhe Conosco</a>
-      <a data-nav="contact"   href="./contato.html">Contato</a>
+      <a data-nav="home" href="./index.html">Home</a>
+      <a data-nav="about" href="./sobre.html">Sobre</a>
+      <a data-nav="careers" href="./trabalhe-conosco.html">Trabalhe Conosco</a>
+      <a data-nav="contact" href="./contato.html">Contato</a>
     </nav>
     <div class="lang mobile" style="margin-top:10px;display:flex;gap:8px">
       <button class="lang-btn btn-ghost flag" data-lang="pt" aria-label="Português" title="Português"></button>
@@ -66,35 +46,78 @@
   </div>
 </header>
 
-
-<!-- Importante: garantir que o app.js seja carregado -->
 <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.3.3/build/js/intlTelInput.min.js"></script>
 <script src="./app.js" type="module"></script>
 
-
-  <section class="hero contact reveal">
+<main>
+  <!-- HERO -->
+  <section class="hero careers reveal">
     <div class="container hero-inner">
-      <h1 data-i18n="contact.title"></h1>
-      <p class="muted" data-i18n="contact.subtitle"></p>
+      <h1><span data-i18n="careers.title"></span></h1>
+      <p class="muted" style="max-width:800px;margin:14px auto 0 auto" data-i18n="careers.subtitle"></p>
+      <div class="actions">
+        <a class="btn btn-ghost" href="#vagas" data-i18n="careers.cta.view"></a>
+        <a class="btn btn-primary" href="#curriculo" data-i18n="careers.cta.send"></a>
+      </div>
     </div>
   </section>
 
-  <section class="section reveal" style="background:var(--surface)">
-    <div class="container contact-grid">
-      <div>
-        <h1 class="text-brand" data-i18n="contact.title"></h1>
-        <p class="mt-2" data-i18n="contact.subtitle"></p>
+  <!-- Minha equipe -->
+  <section class="section reveal" id="vagas">
+    <div class="container">
+      <h2 class="text-brand" data-i18n="careers.team"></h2>
+      <p class="muted" style="margin-top:8px" data-i18n="careers.teamSubtitle"></p>
+      <div class="team-grid" style="margin-top:18px">
+        <article class="team-card">
+          <div class="avatar" style="background-image:url('./images/7.jpg')"></div>
+          <div class="text-lg" style="font-weight:700" data-i18n="careers.teamCards.eng.title"></div>
+          <div class="muted" data-i18n="careers.teamCards.eng.desc"></div>
+        </article>
+        <article class="team-card">
+          <div class="avatar" style="background-image:url('./images/8.jpg')"></div>
+          <div class="text-lg" style="font-weight:700" data-i18n="careers.teamCards.tech.title"></div>
+          <div class="muted" data-i18n="careers.teamCards.tech.desc"></div>
+        </article>
+        <article class="team-card">
+          <div class="avatar" style="background-image:url('./images/10.jpg')"></div>
+          <div class="text-lg" style="font-weight:700" data-i18n="careers.teamCards.plan.title"></div>
+          <div class="muted" data-i18n="careers.teamCards.plan.desc"></div>
+        </article>
+        <article class="team-card">
+          <div class="avatar" style="background-image:url('./images/12.jpg')"></div>
+          <div class="text-lg" style="font-weight:700" data-i18n="careers.teamCards.qual.title"></div>
+          <div class="muted" data-i18n="careers.teamCards.qual.desc"></div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        <div class="card contact-card" style="margin-top:16px">
-          <div><strong data-i18n="contact.phone"></strong>: +55 (34) 3231-1080</div>
-          <div><strong data-i18n="contact.email"></strong>: portugalgeng.comercial@gmail.com</div>
-          <div><strong data-i18n="contact.address"></strong>: Av. Profa. Juvenília dos Santos, 1432 — Santa Mônica — Uberlândia</div>
-          <div><strong>Dir. comercial</strong>: Elano Teixeira Leite Júnior</div>
-          <a class="btn btn-primary" target="_blank" href="tel:+5534997981080">Ligar: (34) 99798-1080</a>
+  <!-- Clientes -->
+  <section class="section clients reveal">
+    <div class="container">
+      <h2 class="text-brand" data-i18n="careers.clients"></h2>
+      <p class="muted" style="margin-top:8px" data-i18n="careers.clientsSubtitle"></p>
+      <div class="clients-logos" style="margin-top:18px">
+        <div class="client-badge" data-i18n="careers.clientsBadges.a"></div>
+        <div class="client-badge" data-i18n="careers.clientsBadges.b"></div>
+        <div class="client-badge" data-i18n="careers.clientsBadges.c"></div>
+        <div class="client-badge" data-i18n="careers.clientsBadges.d"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form de currículo -->
+  <section id="curriculo" class="section reveal" style="background:var(--surface)">
+    <div class="container careers-grid">
+      <div class="careers-col-left">
+        <h2 class="text-brand" data-i18n="careers.form.title"></h2>
+        <p class="muted" style="margin-top:8px" data-i18n="careers.form.subtitle"></p>
+        <!-- imagem acompanhando a altura do form (desktop) -->
+        <div class="img-tile hide-mobile" style="flex:1 1 auto; min-height: 520px;">
+          <div class="img" style="background-image:url('https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/heavy-excavator-digging-day-light%20(1).jpg?raw=true'); background-position:center; background-size:cover"></div>
         </div>
       </div>
-
-      <form id="contact-form" class="card" action="./send.php" method="POST">
+      <form id="careers-form" class="card" action="./send.php" method="POST" enctype="multipart/form-data">
         <div class="field">
           <label data-i18n="form.name"></label>
           <input name="name" required />
@@ -105,15 +128,19 @@
         </div>
         <div class="field">
           <label data-i18n="form.phone"></label>
-          <input type="tel" name="phone" id="contact-phone" />
+          <input type="tel" name="phone" id="careers-phone" />
         </div>
         <div class="field">
-          <label data-i18n="form.subject"></label>
-          <input name="subject" />
+          <label data-i18n="careers.form.area"></label>
+          <input name="subject" data-i18n-placeholder="careers.form.areaPh" />
         </div>
         <div class="field">
           <label data-i18n="form.message"></label>
-          <textarea name="message" rows="6" required></textarea>
+          <textarea name="message" rows="5" data-i18n-placeholder="careers.form.messagePh"></textarea>
+        </div>
+        <div class="field">
+          <label data-i18n="careers.form.resume"></label>
+          <input type="file" name="resume" accept="application/pdf" />
         </div>
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true" />
         <button class="btn btn-primary" data-i18n="form.send"></button>
@@ -161,7 +188,9 @@
       </div>
     </div>
   </footer>
+</main>
 
-  <script src="./app.js" type="module"></script>
+<script src="./app.js" type="module"></script>
 </body>
 </html>
+

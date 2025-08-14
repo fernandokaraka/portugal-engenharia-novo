@@ -119,14 +119,25 @@ img{ max-width:100%; display:block }
   color:#fff;
   background:
     linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55)),
-    url('https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/1920x1080-hero.jpg?raw=true')
+    url('https://images.unsplash.com/photo-1581091012184-5cbaa00b9fcd?q=80&w=1920&auto=format&fit=crop')
     center/cover no-repeat;
 }
-.hero.small{
-  min-height: 420px; /* maior que antes */
+
+/* Hero específico Home (trator) */
+.hero.home{
   background:
     linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55)),
-    url('https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=1920&auto=format&fit=crop')
+    url('https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/heavy-excavator-digging-day-light.jpg?raw=true')
+    center/cover no-repeat;
+}
+/* Forçar quebra em mais linhas no título do hero da Home */
+.hero.home h1{ max-width:16ch; margin-left:auto; margin-right:auto; }
+@media (max-width: 860px){ .hero.home h1{ max-width:18ch; } }
+.hero.small{
+  min-height: 420px;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55)),
+    url('https://images.unsplash.com/photo-1604014237800-1c9091e7e1d3?q=80&w=1920&auto=format&fit=crop')
     center/cover no-repeat;
 }
 .hero-overlay{ position:absolute; inset:0; pointer-events:none }
@@ -357,7 +368,7 @@ h1, h2, h3, .brand { font-family: 'Inter', system-ui, Segoe UI, Arial, sans-seri
 .header .nav a:hover{ background:#f4faf5; }
 
 /* HERO — texto branco, acentos em verde; subtítulo branco */
-.hero{ min-height: 760px; }
+
 .hero::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)); }
 .hero .hero-inner{ position:relative; z-index:1; }
 .hero h1{
@@ -392,6 +403,33 @@ h1, h2, h3, .brand { font-family: 'Inter', system-ui, Segoe UI, Arial, sans-seri
 .btn-ghost{ background:#fff; color:var(--ink); border-color: var(--line); }
 .btn-ghost:hover{ background:#f8faf9; }
 
+/* Hero específico para Trabalhe Conosco */
+.hero.careers{
+  position:relative;
+  color:#fff;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+}
+
+/* Hero específico Sobre */
+.hero.about{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+}
+
+/* Hero específico Contato */
+.hero.contact{
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.65)),
+    url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+  min-height: clamp(240px, 36vh, 420px);
+}
+
+/* Contact hero: reduzir altura do conteúdo interno */
+.hero.contact .hero-inner{ min-height: clamp(240px, 36vh, 420px); }
+
 /* Métricas (faixa) responsiva */
 .strip{ background:#fff; border-block:1px solid var(--line); }
 .grid-4{ grid-template-columns: repeat(2, 1fr); }
@@ -424,6 +462,27 @@ h1, h2, h3, .brand { font-family: 'Inter', system-ui, Segoe UI, Arial, sans-seri
 @media (min-width: 1024px){
   [data-split] .img-tile{ aspect-ratio: 16 / 9; }
 }
+/* Deixa o split3 (Projetos Sob Medida) com imagem mais alta/larga em desktop */
+@media (min-width: 1024px){
+  [data-split="split3"] .grid.cols-2{ grid-template-columns: .9fr 1.1fr; }
+  [data-split="split3"] .img-tile{ aspect-ratio: 4 / 3; min-height: 460px; }
+}
+/* Aumentar imagens também em Soluções Industriais (split1) e Infraestrutura Urbana (split2) */
+@media (min-width: 1024px){
+  [data-split="split1"] .grid.cols-2{ grid-template-columns: 1.1fr .9fr; }
+  [data-split="split1"] .img-tile{ aspect-ratio: 4 / 3; min-height: 460px; }
+  [data-split="split2"] .grid.cols-2{ grid-template-columns: .9fr 1.1fr; }
+  [data-split="split2"] .img-tile{ aspect-ratio: 4 / 3; min-height: 460px; }
+}
+
+/* Ordem mobile: na seção Infraestrutura Urbana a imagem vai por último */
+@media (max-width: 960px){
+  [data-split="split2"] .grid > .img-tile{ order: 2; }
+  [data-split="split2"] .grid > :not(.img-tile){ order: 1; }
+}
+/* Evitar sobreposição visual em Infraestrutura Urbana */
+[data-split="split2"] .img-tile{ width:100%; max-width:100%; position:relative; z-index:0; }
+[data-split="split2"] .grid > :not(.img-tile){ position:relative; z-index:1; }
 
 /* Grids de splits */
 .grid-2{ gap: clamp(18px, 3vw, 28px); }
@@ -575,6 +634,12 @@ footer.container{ max-width: none; padding-inline: 0; } /* não usa o width de .
   opacity: 1; transform: scale(1);
 }
 
+/* Garantir margem/altura suficiente para o bloco do carrossel em mobile */
+@media (max-width: 860px){
+  .marquee{ padding-bottom: 8px; }
+  .marquee .tile{ flex-basis: clamp(200px, 70vw, 320px); }
+}
+
 /* ===== Header sticky + responsivo ===== */
 .site-header{
   position: sticky; top: 0; z-index: 1000;
@@ -634,6 +699,11 @@ footer.container{ max-width: none; padding-inline: 0; } /* não usa o width de .
 
 /* Link em bloco no mobile CTA do painel */
 .btn.block{ display:block; width:100%; }
+.mobile-panel .btn.block{
+  margin-top: 16px;
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; text-align: center;
+}
 
 /* === Helpers para a Home (splits/serviços) === */
 .grid{ display:grid; gap: clamp(16px, 3vw, 24px); }
@@ -657,7 +727,9 @@ footer.container{ max-width: none; padding-inline: 0; } /* não usa o width de .
   text-align: center;
 }
 @media (max-width: 860px){
-  .hero-inner{ min-height: clamp(480px, 60vh, 620px); }
+  .hero-inner{ min-height: clamp(420px, 55vh, 560px); text-align:center; }
+  .hero h1{ font-size: clamp(30px, 7.2vw, 40px); text-align:center; margin-left:auto; margin-right:auto; }
+  .hero p{ text-align:center; margin-left:auto; margin-right:auto; }
 }
 
 /* === Fix Big Numbers (container .metrics) === */
@@ -667,6 +739,91 @@ footer.container{ max-width: none; padding-inline: 0; } /* não usa o width de .
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
 }
+
+/* Logo como imagem */
+.brand-logo{ height: 28px; width:auto; display:block }
+@media (min-width: 960px){ .brand-logo{ height: 32px } }
+
+/* Language switcher com bandeiras */
+.lang-btn.flag{
+  width: 32px; height: 22px; padding:0;
+  display:inline-block; border-radius:6px;
+  background-position:center; background-repeat:no-repeat; background-size:cover;
+}
+.lang .lang-btn.flag{ border:1px solid var(--line); }
+.lang-btn.flag[data-lang="pt"]{ background-image:url('https://flagcdn.com/w40/br.png'); }
+.lang-btn.flag[data-lang="en"]{ background-image:url('https://flagcdn.com/w40/us.png'); }
+.lang-btn.flag[data-lang="es"]{ background-image:url('https://flagcdn.com/w40/es.png'); }
+
+/* ---- Ocultar Portfólio temporariamente (menu e rodapé) ---- */
+.nav a[data-nav="portfolio"], .mobile-panel .nav a[data-nav="portfolio"],
+.site-footer a[data-nav="portfolio"]{ display:none !important; }
+
+/* ---- Como trabalhamos: centralizar texto dos cards ---- */
+#how-steps .card{
+  display:flex; align-items:center; justify-content:center;
+  text-align:center; min-height:64px;
+}
+
+/* ---- Contato: mais espaçamento nas infos à esquerda ---- */
+.contact-card > div{ margin-bottom: 10px; }
+.contact-card .btn{ margin-top: 12px; }
+
+/* ---- Formulário: mais respiro entre campos e botão full ---- */
+#contact-form{ display:grid; gap: 14px; }
+#contact-form .field{ gap: 10px; }
+#contact-form button.btn{ margin-top: 6px; width: 100%; }
+
+/* Careers form */
+#careers-form{ display:grid; gap: 14px; }
+#careers-form .field{ gap: 10px; }
+#careers-form button.btn{ margin-top: 6px; width: 100%; }
+
+/* Phone input with country selector */
+/* intl-tel-input tweaks */
+.iti{ width:100%; border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#fff }
+.iti__flag-container{ overflow:hidden }
+.iti__flag-container .iti__selected-flag{ border-radius:12px 0 0 12px }
+.iti input[type="tel"]{ width:100%; border-radius:0 12px 12px 0 }
+
+/* Força o arredondamento quando usando separateDialCode */
+.iti--separate-dial-code .iti__flag-container{
+  border:0; border-right:1px solid var(--line); background:#fff; height:100%;
+}
+.iti--separate-dial-code .iti__selected-flag{ border:0; height:100%; background:#fff; }
+.iti--separate-dial-code input[type="tel"]{ border:0; }
+
+/* Grid da página de contato responsivo */
+.contact-grid{ display:grid; gap:24px; grid-template-columns:1fr 1fr; align-items:start }
+@media (max-width: 960px){
+  .contact-grid{ grid-template-columns:1fr; }
+}
+
+/* Careers grid (texto em cima, form embaixo no mobile) */
+.careers-grid{ display:grid; gap:24px; grid-template-columns:minmax(0,1fr) minmax(0,1fr); align-items:stretch }
+@media (max-width: 960px){ .careers-grid{ grid-template-columns:1fr; } }
+
+/* Coluna esquerda (texto + imagem) acompanha altura do form */
+.careers-col-left{ display:flex; flex-direction:column; gap:14px; height:100%; }
+@media (min-width: 961px){
+  .careers-col-left .img-tile{ flex:1 1 auto; }
+}
+
+/* Team and Clients sections */
+.team-grid{ display:grid; gap:18px; grid-template-columns: repeat(1, 1fr); }
+@media (min-width: 700px){ .team-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px){ .team-grid{ grid-template-columns: repeat(4, 1fr); } }
+.team-card{ background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; text-align:center; box-shadow: 0 10px 24px rgba(0,0,0,.06); }
+.avatar{ width:84px; height:84px; border-radius:999px; margin:0 auto 10px auto; background:#e9efea; background-position:center; background-size:cover; }
+
+.clients{ background:var(--surface); }
+.clients-logos{ display:grid; gap:16px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 700px){ .clients-logos{ grid-template-columns: repeat(4, 1fr); } }
+.client-badge{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px; text-align:center; font-weight:700; }
+
+/* Util: esconder em mobile */
+.hide-mobile{ display:block; }
+@media (max-width: 960px){ .hide-mobile{ display:none !important; } }
 @media (min-width: 860px){
   .metrics{ grid-template-columns: repeat(4, 1fr); }
 }
