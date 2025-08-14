@@ -68,7 +68,7 @@
 <script src="./app.js" type="module"></script>
 
 
-  <section class="section" style="background:var(--surface)">
+  <section class="section reveal" style="background:var(--surface)">
     <div class="container" style="display:grid;gap:24px;grid-template-columns:1fr 1fr">
       <div>
         <h1 class="text-brand" data-i18n="contact.title"></h1>
@@ -82,7 +82,7 @@
         </div>
       </div>
 
-      <form id="contact-form" class="card" action="https://formspree.io/f/SEU_ID_AQUI" method="POST">
+      <form id="contact-form" class="card" action="#" method="POST">
         <div class="field">
           <label data-i18n="form.name"></label>
           <input name="name" required />
@@ -103,13 +103,50 @@
           <label data-i18n="form.message"></label>
           <textarea name="message" rows="6" required></textarea>
         </div>
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true" />
         <button class="btn btn-primary" data-i18n="form.send"></button>
+        <div id="form-status" class="mt-2" style="color:var(--muted)"></div>
       </form>
     </div>
   </section>
 
-  <footer class="container section" style="text-align:center;color:#6b7280">
-    <small>© <span id="year"></span> Portugal Engenharia</small>
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <h4>Portugal Engenharia</h4>
+          <p data-i18n="footer.companyText"></p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.quickLinks"></h4>
+          <div class="list" style="gap:8px">
+            <a data-nav="about" href="./sobre.html" data-i18n="footer.nav.about"></a>
+            <a data-nav="portfolio" href="./portfolio.html" data-i18n="footer.nav.portfolio"></a>
+            <a data-nav="contact" href="./contato.html" data-i18n="footer.nav.contact"></a>
+          </div>
+        </div>
+        <div>
+          <h4 data-i18n="footer.follow"></h4>
+          <div class="list social" style="gap:8px">
+            <a href="https://www.linkedin.com" target="_blank" rel="noopener" data-i18n="footer.social.linkedin"></a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener" data-i18n="footer.social.instagram"></a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener" data-i18n="footer.social.facebook"></a>
+          </div>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact"></h4>
+          <div class="list" style="gap:6px">
+            <a href="tel:+553432311080">(34) 3231-1080</a>
+            <a href="mailto:portugalgeng.comercial@gmail.com">portugalgeng.comercial@gmail.com</a>
+            <span>Av. Profa. Juvenília dos Santos, 1432 — Santa Mônica — Uberlândia</span>
+          </div>
+        </div>
+      </div>
+      <div class="copy">
+        © <span id="year"></span> Portugal Engenharia —
+        <span data-i18n="footer.rights"></span>
+      </div>
+    </div>
   </footer>
 
   <script src="./app.js" type="module"></script>

@@ -50,6 +50,8 @@
     "missionText": "Provide solutions grounded on Project Management, Engineering and HSE (Health, Safety and Environment).",
     "vision": "Vision",
     "visionText": "Be a reference in the civil and industrial sector while contributing to a more sustainable environment.",
+    "values": "Values",
+    "valuesText": "Ethics, safety, commitment to deadlines and respect for people and the environment.",
     "pillarsTitle": "Our Pillars",
     "pillars": [
       { "title": "Technology", "desc": "Process and technological control at every stage." },
@@ -62,7 +64,9 @@
       "steps": [
         "Technical survey and scope definition",
         "Schedule, cost and HSE planning",
+        "Team and site mobilization",
         "Execution with quality control",
+        "Technological control and HSE",
         "Commissioning and technical handover"
       ]
     },
@@ -79,6 +83,15 @@
     "filters": { "todos": "All", "industrial": "Commercial & Industrial", "infra": "Infrastructure", "refrigeracao": "Refrigeration" },
     "seeMore": "See details →"
   },
+  "footer": {
+    "companyText": "Civil and industrial engineering focused on planning, quality and safety.",
+    "quickLinks": "Quick links",
+    "nav": {"about": "About", "portfolio": "Portfolio", "contact": "Contact"},
+    "contact": "Contact",
+    "follow": "Follow us",
+    "social": {"linkedin": "LinkedIn", "instagram": "Instagram", "facebook": "Facebook"},
+    "rights": "All rights reserved"
+  },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Send your message or reach us through the channels below.",
@@ -94,6 +107,8 @@
     "subject": "Subject",
     "message": "Message",
     "send": "Send",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "sentOk": "Message sent successfully!",
+    "sentErr": "Could not send. Please try again."
   }
 }

@@ -50,6 +50,8 @@
     "missionText": "Fornecer soluções para obras alicerçadas nos pilares de Gestão de Projetos, Engenharia e SSMA (Saúde, Segurança e Meio Ambiente).",
     "vision": "Visão",
     "visionText": "Ser referência no setor civil e industrial, trabalhando por um ambiente mais sustentável.",
+    "values": "Valores",
+    "valuesText": "Ética, segurança, compromisso com prazos e respeito às pessoas e ao meio ambiente.",
     "pillarsTitle": "Nossos Pilares",
     "pillars": [
       { "title": "Tecnologia", "desc": "Aplicação de processos e controle tecnológico em todas as etapas." },
@@ -62,7 +64,9 @@
       "steps": [
         "Levantamento técnico e definição de escopo",
         "Planejamento de prazos, custos e SSMA",
+        "Mobilização de equipe e canteiro",
         "Execução com controle de qualidade",
+        "Controle tecnológico e SSMA",
         "Comissionamento e entrega técnica"
       ]
     },
@@ -79,6 +83,15 @@
     "filters": { "todos": "Todos", "industrial": "Comerciais & Industriais", "infra": "Infraestrutura", "refrigeracao": "Refrigeração" },
     "seeMore": "Ver detalhes →"
   },
+  "footer": {
+    "companyText": "Engenharia civil e industrial com foco em planejamento, qualidade e segurança.",
+    "quickLinks": "Links rápidos",
+    "nav": {"about": "Sobre", "portfolio": "Portfólio", "contact": "Contato"},
+    "contact": "Contato",
+    "follow": "Siga nas redes",
+    "social": {"linkedin": "LinkedIn", "instagram": "Instagram", "facebook": "Facebook"},
+    "rights": "Todos os direitos reservados"
+  },
   "contact": {
     "title": "Fale Conosco",
     "subtitle": "Envie sua mensagem ou entre em contato pelos canais abaixo.",
@@ -94,6 +107,8 @@
     "subject": "Assunto",
     "message": "Mensagem",
     "send": "Enviar",
-    "sending": "Enviando..."
+    "sending": "Enviando...",
+    "sentOk": "Mensagem enviada com sucesso!",
+    "sentErr": "Não foi possível enviar. Tente novamente."
   }
 }

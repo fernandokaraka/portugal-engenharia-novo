@@ -62,7 +62,7 @@
 
 <main>
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero reveal">
     <div class="container hero-inner">
       <div class="center">
         <h1 class="title">
@@ -81,7 +81,7 @@
   </section>
 
   <!-- BIG NUMBERS -->
-  <section class="strip">
+  <section class="strip reveal">
     <div class="container section" style="padding-block:48px">
       <div class="metrics">
         <div>
@@ -105,7 +105,7 @@
   </section>
 
   <!-- SERVIÇOS (cards) -->
-  <section id="servicos" class="surface section">
+  <section id="servicos" class="surface section reveal">
     <div class="container">
       <div class="services-header">
         <h2 style="color:var(--brand)" data-i18n="home.services.title"></h2>
@@ -135,51 +135,87 @@
   </section>
 
   <!-- SPLIT 1 -->
-  <section class="section" data-split="split1">
-    <div class="container grid cols-2" style="align-items:center;gap:28px">
-      <div>
-       <h2 style="color:var(--brand)" data-i18n="home.split1.title"></h2>
-<p class="muted" style="margin-top:10px" data-i18n="home.split1.desc"></p>
-<div class="grid" style="margin-top:16px">
-  <div class="pill" data-i18n="home.split1.pills.0"></div>
-  <div class="pill" data-i18n="home.split1.pills.1"></div>
-  <div class="pill" data-i18n="home.split1.pills.2"></div>
-  <div class="pill" data-i18n="home.split1.pills.3"></div>
-</div>
-  </section>
+<section class="section reveal" data-split="split1">
+  <div class="container grid cols-2" style="align-items:center;gap:28px">
+    <div>
+      <h2 style="color:var(--brand)" data-i18n="home.split1.title"></h2>
+      <p class="muted" style="margin-top:10px" data-i18n="home.split1.desc"></p>
+      <div class="grid" style="margin-top:16px">
+        <div class="pill" data-i18n="home.split1.pills.0"></div>
+        <div class="pill" data-i18n="home.split1.pills.1"></div>
+        <div class="pill" data-i18n="home.split1.pills.2"></div>
+        <div class="pill" data-i18n="home.split1.pills.3"></div>
+      </div>
+    </div>
+
+    <!-- Imagem -->
+    <div class="img-tile">
+      <div
+        class="img"
+        style="background-image:url('./assets/home/split-1.jpg')"
+        aria-label="Imagem Split 1"
+        role="img"
+      ></div>
+    </div>
+  </div>
+</section>
+
 
   <!-- SPLIT 2 -->
-  <section class="surface section" data-split="split2">
-    <div class="container grid cols-2" style="align-items:center;gap:28px">
-      <div class="img-tile">
-        <div class="img" style="background-image:url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1600&auto=format&fit=crop')"></div>
+<section class="surface section reveal" data-split="split2">
+  <div class="container grid cols-2" style="align-items:center;gap:28px">
+    <!-- Imagem -->
+    <div class="img-tile">
+      <div
+        class="img"
+        style="background-image:url('https://github.com/fernandokaraka/portugal-engenharia-novo/blob/main/images/10.jpg?raw=truess')"
+        aria-label="Imagem Split 2"
+        role="img"
+      ></div>
+    </div>
+
+    <div>
+      <h2 style="color:var(--brand)" data-i18n="home.split2.title"></h2>
+      <p class="muted" style="margin-top:10px" data-i18n="home.split2.desc"></p>
+      <div class="grid" style="margin-top:16px">
+        <div class="pill" data-i18n="home.split2.pills.0"></div>
+        <div class="pill" data-i18n="home.split2.pills.1"></div>
+        <div class="pill" data-i18n="home.split2.pills.2"></div>
+        <div class="pill" data-i18n="home.split2.pills.3"></div>
       </div>
-      <div>
-        <h2 style="color:var(--brand)" data-i18n="home.split2.title"></h2>
-<p class="muted" style="margin-top:10px" data-i18n="home.split2.desc"></p>
-<div class="grid" style="margin-top:16px">
-  <div class="pill" data-i18n="home.split2.pills.0"></div>
-  <div class="pill" data-i18n="home.split2.pills.1"></div>
-  <div class="pill" data-i18n="home.split2.pills.2"></div>
-  <div class="pill" data-i18n="home.split2.pills.3"></div>
-</div>
-  </section>
+    </div>
+  </div>
+</section>
 
-  <!-- SPLIT 3 -->
-  <section class="section" data-split="split3">
-    <div class="container grid cols-2" style="align-items:center;gap:28px">
-      <div>
-       <h2 style="color:var(--brand)" data-i18n="home.split3.title"></h2>
-<p class="muted" style="margin-top:10px" data-i18n="home.split3.desc"></p>
-<div class="grid" style="margin-top:16px">
-  <div class="pill" data-i18n="home.split3.pills.0"></div>
-  <div class="pill" data-i18n="home.split3.pills.1"></div>
-  <div class="pill" data-i18n="home.split3.pills.2"></div>
-  <div class="pill" data-i18n="home.split3.pills.3"></div>
-</div>
-  </section>
 
-  <section class="cta-full">
+<!-- SPLIT 3 -->
+<section class="section reveal" data-split="split3">
+  <div class="container grid cols-2" style="align-items:center;gap:28px">
+    <div>
+      <h2 style="color:var(--brand)" data-i18n="home.split3.title"></h2>
+      <p class="muted" style="margin-top:10px" data-i18n="home.split3.desc"></p>
+      <div class="grid" style="margin-top:16px">
+        <div class="pill" data-i18n="home.split3.pills.0"></div>
+        <div class="pill" data-i18n="home.split3.pills.1"></div>
+        <div class="pill" data-i18n="home.split3.pills.2"></div>
+        <div class="pill" data-i18n="home.split3.pills.3"></div>
+      </div>
+    </div>
+
+    <!-- Imagem -->
+    <div class="img-tile">
+      <div
+        class="img"
+        style="background-image:url('./assets/home/split-3.jpg')"
+        aria-label="Imagem Split 3"
+        role="img"
+      ></div>
+    </div>
+  </div>
+</section>
+
+
+  <section class="cta-full reveal">
   <div class="cta-content" style="text-align:center">
     <h3 style="color:#fff" data-i18n="home.cta.title"></h3>
     <p data-i18n="home.cta.subtitle"></p>
@@ -188,7 +224,7 @@
 </section>
 
 
- <footer class="site-footer">
+  <footer class="site-footer">
   <div class="wrap">
     <div class="grid">
       <div>
@@ -201,6 +237,14 @@
           <a data-nav="about" href="./sobre.html" data-i18n="footer.nav.about"></a>
           <a data-nav="portfolio" href="./portfolio.html" data-i18n="footer.nav.portfolio"></a>
           <a data-nav="contact" href="./contato.html" data-i18n="footer.nav.contact"></a>
+        </div>
+      </div>
+      <div>
+        <h4 data-i18n="footer.follow"></h4>
+        <div class="list social" style="gap:8px">
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener" data-i18n="footer.social.linkedin"></a>
+          <a href="https://www.instagram.com" target="_blank" rel="noopener" data-i18n="footer.social.instagram"></a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener" data-i18n="footer.social.facebook"></a>
         </div>
       </div>
       <div>

@@ -250,12 +250,35 @@ function initForm(messages) {
   const form = $('#contact-form');
   if (!form) return;
   const sending = get(messages, 'form.sending') || 'Enviando...';
+  const sentOk  = get(messages, 'form.sentOk')  || 'Mensagem enviada com sucesso!';
+  const sentErr = get(messages, 'form.sentErr') || 'Falha ao enviar. Tente novamente.';
 
-  form.addEventListener('submit', () => {
+  form.addEventListener('submit', async (ev) => {
+    ev.preventDefault();
     const btn = form.querySelector('button');
-    if (btn) {
-      btn.disabled = true;
-      btn.textContent = sending;
+    const status = $('#form-status');
+    if (btn) { btn.disabled = true; btn.textContent = sending; }
+    if (status) status.textContent = '';
+
+    try{
+      const data = Object.fromEntries(new FormData(form).entries());
+      // honeypot simples
+      if (data._gotcha) throw new Error('spam');
+
+      const resp = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+
+      if (!resp.ok) throw new Error(await resp.text());
+      if (status) status.textContent = sentOk;
+      form.reset();
+    }catch(err){
+      console.error(err);
+      if (status) status.textContent = sentErr;
+    }finally{
+      if (btn) { btn.disabled = false; btn.textContent = get(messages, 'form.send') || 'Enviar'; }
     }
   });
 }
@@ -333,6 +356,17 @@ async function applyLang(lang) {
     const lang = getLangFromURL();
     await applyLang(lang);
     initStickyHeader();
+
+    // Intersection Observer para animações de entrada
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
   } catch (err) {
     console.error(err);
     if (String(err).includes('Tradução')) {

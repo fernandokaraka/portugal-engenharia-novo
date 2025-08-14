@@ -50,6 +50,8 @@
     "missionText": "Brindar soluciones basadas en Gestión de Proyectos, Ingeniería y HSE (Salud, Seguridad y Medio Ambiente).",
     "vision": "Visión",
     "visionText": "Ser referencia en el sector civil e industrial, trabajando por un entorno más sostenible.",
+    "values": "Valores",
+    "valuesText": "Ética, seguridad, compromiso con los plazos y respeto a las personas y al medio ambiente.",
     "pillarsTitle": "Nuestros Pilares",
     "pillars": [
       { "title": "Tecnología", "desc": "Control de procesos y tecnología en todas las etapas." },
@@ -62,7 +64,9 @@
       "steps": [
         "Relevamiento técnico y definición de alcance",
         "Planificación de plazos, costos y HSE",
+        "Movilización del equipo y del sitio",
         "Ejecución con control de calidad",
+        "Control tecnológico y HSE",
         "Puesta en marcha y entrega técnica"
       ]
     },
@@ -79,6 +83,15 @@
     "filters": { "todos": "Todos", "industrial": "Comerciales e Industriales", "infra": "Infraestructura", "refrigeracao": "Refrigeración" },
     "seeMore": "Ver detalles →"
   },
+  "footer": {
+    "companyText": "Ingeniería civil e industrial enfocada en planificación, calidad y seguridad.",
+    "quickLinks": "Enlaces rápidos",
+    "nav": {"about": "Sobre", "portfolio": "Portafolio", "contact": "Contacto"},
+    "contact": "Contacto",
+    "follow": "Síganos",
+    "social": {"linkedin": "LinkedIn", "instagram": "Instagram", "facebook": "Facebook"},
+    "rights": "Todos los derechos reservados"
+  },
   "contact": {
     "title": "Contáctenos",
     "subtitle": "Envíe su mensaje o use los canales abajo.",
@@ -94,6 +107,8 @@
     "subject": "Asunto",
     "message": "Mensaje",
     "send": "Enviar",
-    "sending": "Enviando..."
+    "sending": "Enviando...",
+    "sentOk": "¡Mensaje enviado con éxito!",
+    "sentErr": "No se pudo enviar. Intente de nuevo."
   }
 }
