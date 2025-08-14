@@ -1,9 +1,6 @@
 {
-  "functions": {
-    "api/**.js": { "runtime": "nodejs18.x" }
-  },
   "routes": [
-    { "src": "/api/contact", "methods": ["POST"], "dest": "/api/contact.js" }
+    { "src": "/api/contact", "methods": ["POST", "OPTIONS"], "dest": "/api/contact.js" }
   ]
 }
 
