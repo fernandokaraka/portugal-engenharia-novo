@@ -271,12 +271,18 @@ function initForm(messages) {
         body: JSON.stringify(data)
       });
 
-      if (!resp.ok) throw new Error(await resp.text());
+      if (!resp.ok) {
+        const text = await resp.text();
+        throw new Error(text || 'Request failed');
+      }
       if (status) status.textContent = sentOk;
       form.reset();
     }catch(err){
       console.error(err);
-      if (status) status.textContent = sentErr;
+      if (status) {
+        const msg = (err && err.message) ? err.message : String(err);
+        status.textContent = sentErr + (msg ? ` — ${msg}` : '');
+      }
     }finally{
       if (btn) { btn.disabled = false; btn.textContent = get(messages, 'form.send') || 'Enviar'; }
     }
