@@ -2,6 +2,9 @@
   "name": "portugal-engenharia",
   "private": true,
   "type": "module",
+  "scripts": {
+    "dev": "vercel dev"
+  },
   "dependencies": {
     "resend": "^3.2.0"
   }
